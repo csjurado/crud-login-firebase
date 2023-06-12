@@ -1,24 +1,26 @@
 <ion-content>
   <app-header backButton="/auth"></app-header>
-  <h2 class="ion-text-center ion-no-margin"> Login</h2>
+  <h2 class="ion-text-center ion-no-margin"> Registrar</h2>
 
   <form (kekup.enter)="submit()" (ngSubmit)="submit()" class="ion-text-center">
+
+    <app-custom-input [control]="form.controls.name" type="text" label="Nombre"
+      icon="person-outline"></app-custom-input>
+
+
     <app-custom-input [control]="form.controls.email" type="email" label="Correo"
       icon="mail-outline"></app-custom-input>
 
     <app-custom-input [control]="form.controls.password" type="password" label="Contraseña"
       icon="lock-closed-outline"></app-custom-input>
-    <ion-button class="ion-margin-vertical" type="submit" shape="round">
-      Acceder
-      <ion-icon slot="end" name="log-in-outline"></ion-icon>
-    </ion-button>
-    <div>
-      <div> No tienes Cuenta ? </div>
-      <ion-button routerLink="sign-up" class="ion-margin-vertical" shape="round">
-        Registrarse
-        <ion-icon slot="end" name="person-add-outline"></ion-icon>
-      </ion-button>
-    </div>
 
+    <app-custom-input [control]="form.controls.confirmPassword" type="password" label="Confirmar Contraseña"
+      icon="checkmark-circle-outline"></app-custom-input>
+
+
+    <ion-button class="ion-margin-vertical" type="submit" shape="round">
+      Registrarse
+      <ion-icon slot="end" name="person-add-outline"></ion-icon>
+    </ion-button>
   </form>
 </ion-content>

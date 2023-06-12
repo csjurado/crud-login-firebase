@@ -1,0 +1,7 @@
+{
+  "name": "crud-loginFirebase",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
